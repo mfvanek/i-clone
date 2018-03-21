@@ -1,0 +1,18 @@
+Имя dll должно иметь вид:
+язык_iclone_ext.dll
+
+cpp_iclone_ext.dll
+c_iclone_ext.dll
+java_iclone_ext.dll
+cs_iclone_ext.dll
+
+Нужно сделать абстрактный  базовый класс для подобных dll и от него их наследовать.
+
+для загрузки:
+Assembly.Load() + Assembly.GetType() и т.д.
+
+В dll должно быть зашито:
+
+- список расширений файлов для данного языка;
+
+- список символов комментариев

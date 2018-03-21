@@ -1,0 +1,11 @@
+http://www.cyberforum.ru/csharp-net/thread11354.html
+
+
+Ответ: Нумерация в Richtextbox
+Код
+string[] buf = richTextBox1.Lines;
+for (int i = 0; i < richTextBox1.Lines.Length; i++)
+{
+    buf[i] = (i).ToString() + ". " + buf[i]; 
+}
+richTextBox1.Lines = buf;

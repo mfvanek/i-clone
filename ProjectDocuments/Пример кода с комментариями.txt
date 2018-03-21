@@ -1,0 +1,21 @@
+
+//*
+int a = 5; // not commented
+//*/
+
+/*
+int a = 5; // commented
+//*/
+
+
+=====================
+Äëÿ C#
+
+target.LargeString = @"\n
+//*\n
+int a = 5; // not commented\n
+//*/\n
+\n
+/*\n
+int a = 5; // commented\n
+//*/\n";

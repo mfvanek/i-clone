@@ -1,0 +1,46 @@
+Создание иерархии классов на Cpp
+
+#include "stdafx.h"
+#include <vector>
+#include <iostream>
+
+class TObject
+{
+public:
+   TObject()
+   {
+   }
+
+   virtual ~TObject()
+   {
+   }
+
+   virtual std::string ToString()
+   {
+      return std::string("object");
+   }
+};
+
+class A : virtual public TObject
+{
+public:
+   A()
+   {
+   }
+};
+
+class B : virtual public TObject
+{
+public:
+   B()
+   {
+   }
+};
+
+class C : public A, public B
+{
+public:
+   C()
+   {
+   }
+};

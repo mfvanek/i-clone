@@ -1,0 +1,122 @@
+http://msdn.microsoft.com/ru-ru/library/dd335946.aspx
+
+http://www.codeproject.com/KB/dotnet/bridge.aspx
+
+
+===================================================
+
+// VS 2005
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Runtime.InteropServices;
+
+// Показываем, что интерфейс экспортируется для COM
+[ComVisible(true)]
+// Определяем интерфейс как дуальный. Таким образом, мы сможем с легкостью работать с ним как с помощью
+// механизмов раннего связывания в VBA, так и с помощью позднего связывания. Кроме того, это упрощает работу
+// с объектом из C++
+[InterfaceType(ComInterfaceType.InterfaceIsDual)]
+// Определяем GUID интерфейса. Если этого не сделать - он будет меняться на каждой компиляции, что плохо.
+[Guid("74422A42-D67F-4556-A3B9-0C4B63DE370E")]
+public interface IXDllNETInterface
+{
+   // С первой функцией все просто, ее типы маршалятся как int.
+   int getSum(int n1, int n2);
+
+   // Для параметров функций COM-интерфейсов я всегда задаю, как именно будет маршаллиться параметр.
+   // Это позволяет избежать ошибок, связанных с неверными предположениями относительно работы .NET
+   // Здесь мы маршаллим строку как BSTR.
+   // Для возвращаемого значения аналогично, только маршаллинг задается для возвращаемого значения.
+   [return: MarshalAs(UnmanagedType.BStr)]
+   string hello([MarshalAs(UnmanagedType.BStr)] string userName);
+
+   // Для параметров функций COM-интерфейсов я всегда задаю, как именно будет маршаллиться параметр.
+   // Это позволяет избежать ошибок, связанных с неверными предположениями относительно работы .NET
+   // Здесь мы маршаллим строку по ссылке как BSTR.
+   void moreComplexHello([MarshalAs(UnmanagedType.BStr)] ref string resultStr, 
+                          int count, 
+                          [MarshalAs(UnmanagedType.BStr)] string userName);
+}
+
+// Теперь определим CoClass
+[ComVisible(true)]
+[Guid("A97643DD-D673-42E2-99FD-ED1F80F74531")]
+// ProgId необходим для того, чтобы можно было вызвать объект по имени, а не через GUID
+[ProgId("XDllComponent.XDllCoClass")]
+// Помечаем, что функции CoClass-а не нужно преобразовывать в собственный интерфейс и экспортировать.
+// Указав этот атрибут, мы полностью контролируем все интерфейсы, которые экспортируются для COM
+// Если указать в качестве параметра другое значение - функции, которые не являются реализациями
+// интерфейсов будут выделены в отдельный интерфейс и экспортрованы, что не есть хорошо ИМХО.
+[ClassInterface(ClassInterfaceType.None)]
+// Указываем default interface. Делать этого не обязательно для VBA, но в С++ немного облегчает жизнь.
+[ComDefaultInterface(typeof(IXDllNETInterface))]
+public class XDllCoClass : IXDllNETInterface
+{
+   // С первой функцией все просто, ее типы маршалятся как int.
+   public int getSum(int n1, int n2)
+   {
+       return n1 + n2;
+   }
+
+   // Для параметров функций COM-интерфейсов я всегда задаю, как именно будет маршаллиться параметр.
+   // Это позволяет избежать ошибок, связанных с неверными предположениями относительно работы .NET
+   // Здесь мы маршаллим строку как BSTR.
+   // Для возвращаемого значения аналогично, только маршаллинг задается для возвращаемого значения.
+   [return: MarshalAs(UnmanagedType.BStr)]
+   public string hello([MarshalAs(UnmanagedType.BStr)] string userName)
+   {
+       return "Hello, " + userName + "!";
+   }
+
+   // Для параметров функций COM-интерфейсов я всегда задаю, как именно будет маршаллиться параметр.
+   // Это позволяет избежать ошибок, связанных с неверными предположениями относительно работы .NET
+   // Здесь мы маршаллим строку по ссылке как BSTR.
+   public void moreComplexHello([MarshalAs(UnmanagedType.BStr)] ref string resultStr, 
+                                int count, 
+                                [MarshalAs(UnmanagedType.BStr)] string userName)
+   {
+       resultStr = "More complex Hello from " + userName + "!";
+   }
+}
+
+
+==========
+
+Вызывающее native-приложение:
+
+//  VC++ 2005
+
+#include "stdafx.h"
+#include "CXDllNETInterface.h"
+
+#include <iostream>
+#include <atlbase.h>
+
+int main()
+{
+   ::CoInitialize(NULL);
+       
+   CComPtr<IXDllNETInterface> ptr;
+   HRESULT hr = ptr.CoCreateInstance(L"XDllComponent.XDllCoClass");
+   ASSERT(SUCCEEDED(hr));
+   
+   std::cout << "2 + 3 = " << ptr->getSum(2, 3) << std::endl;
+
+   LPCTSTR str = "managed World";
+   std::cout << ptr->hello(str) << std::endl;
+
+   BSTR umc = L"unmanaged code";
+   CComBSTR ret;
+   ptr->moreComplexHello(&ret, 256, umc);
+   std::cout << CString((LPCWSTR)ret) << std::endl;
+
+   ::CoUninitialize();
+   return 0;
+}
+
+// Output:
+// 2 + 3 = 5
+// Hello, managed World!
+// More complex Hello from unmanaged code!
+

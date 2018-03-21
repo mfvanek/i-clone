@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71623E9A-A8B0-4E38-9A71-EED036AE3A9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISourceFilesLibrary</RootNamespace>
+    <AssemblyName>ISourceFilesLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\bin\Debug\ISourceFilesLibrary.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>..\bin\Release\ISourceFilesLibrary.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CodeFragment\CCodeFragment.cs" />
+    <Compile Include="Classes\CodeFragment\CCommentedCodeFragment.cs" />
+    <Compile Include="Classes\CodeUnitsCollection\CCodeUnitsCollection.cs" />
+    <Compile Include="Classes\CodeUnitsCollection\TUnitsCollection.cs" />
+    <Compile Include="Classes\CodeUnit\CCodeUnit.cs" />
+    <Compile Include="Classes\CodeUnit\CElementPosition.cs" />
+    <Compile Include="Classes\CodeUnit\CExtendedCodeUnit.cs" />
+    <Compile Include="Classes\CodeUnit\ICodeUnit.cs" />
+    <Compile Include="Classes\CodeUnit\IElementPosition.cs" />
+    <Compile Include="Classes\CodeUnit\InvalidCodeUnitPositionException.cs" />
+    <Compile Include="Classes\CodeUnit\ISizeableElement.cs" />
+    <Compile Include="Classes\Exceptions\SourceFileIDMismatchException.cs" />
+    <Compile Include="Classes\Languages\LanguagesList.cs" />
+    <Compile Include="Classes\Languages\UnknownLanguageException.cs" />
+    <Compile Include="Classes\SourceFile\CEntireRowSourceFileContentSaver.cs" />
+    <Compile Include="Classes\SourceFile\CSourceFile.cs" />
+    <Compile Include="Classes\SourceFile\CSourceFileContentSaverFactory.cs" />
+    <Compile Include="Classes\SourceFile\CSourceFileID.cs" />
+    <Compile Include="Classes\SourceFile\CSourceFilesCollection.cs" />
+    <Compile Include="Classes\SourceFile\ISourceFileContentSaver.cs" />
+    <Compile Include="Classes\StringEqualityAlgorithms\CBaseStringEqualityStrategy.cs" />
+    <Compile Include="Classes\StringEqualityAlgorithms\CSimpleStringEqualityAlgorithm.cs" />
+    <Compile Include="Classes\HashCodeAlgorithms\CBaseHashCodeGenerateStrategy.cs" />
+    <Compile Include="Classes\HashCodeAlgorithms\CSimpleHashCodeAlgorithm.cs" />
+    <Compile Include="Classes\SyntacticUnit\CSyntacticUnit.cs" />
+    <Compile Include="Classes\SyntacticUnit\CSyntacticUnitsCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ICloneBaseLibrary\ICloneBaseLibrary.csproj">
+      <Project>{81F71051-3697-4951-9D58-29F2EFA958FB}</Project>
+      <Name>ICloneBaseLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_ConfigurationName="Release" BuildVersion_BuildVersioningStyle="None.None.Increment.Increment" BuildVersion_BuildAction="ReBuild" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

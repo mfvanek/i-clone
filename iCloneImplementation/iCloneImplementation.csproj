@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50257099-811E-47EF-AAA7-11F69E4569BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IClone.ICloneImplementation</RootNamespace>
+    <AssemblyName>i-Clone</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ICloneIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionalClasses\CAvailableCulture.cs" />
+    <Compile Include="AdditionalClasses\CCloneSearchOptionsGroup.cs" />
+    <Compile Include="AdditionalClasses\CComboBoxInitializer.cs" />
+    <Compile Include="AdditionalClasses\CCommonOptionsGroup.cs" />
+    <Compile Include="AdditionalClasses\CDeleteSVNSubFoldersOptionsGroup.cs" />
+    <Compile Include="AdditionalClasses\CDetectCodeSizeOptionsGroup.cs" />
+    <Compile Include="AdditionalClasses\CICloneOptionsGroup.cs" />
+    <Compile Include="AdditionalClasses\CICloneOptionsManager.cs" />
+    <Compile Include="AdditionalClasses\CParentOptionsNode.cs" />
+    <Compile Include="AdditionalClasses\CSVNDeleter.cs" />
+    <Compile Include="GUIControls\CCloneSearchOptionsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIControls\CCloneSearchOptionsUserControl.Designer.cs">
+      <DependentUpon>CCloneSearchOptionsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIControls\CCommonOptionsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIControls\CCommonOptionsUserControl.Designer.cs">
+      <DependentUpon>CCommonOptionsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIControls\CDetectCodeSizeOptionsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIControls\CDetectCodeSizeOptionsUserControl.Designer.cs">
+      <DependentUpon>CDetectCodeSizeOptionsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIControls\ICloneBaseUIControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUIControls\ICloneBaseUIControl.Designer.cs">
+      <DependentUpon>ICloneBaseUIControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIControls\ICloneOptionsCommonGUI.cs" />
+    <Compile Include="ICloneLocalization.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICloneLocalization.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WindowForms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowForms\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalClasses\CWindowNamer.cs" />
+    <Compile Include="WindowForms\CloneReportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowForms\CloneReportWindow.Designer.cs">
+      <DependentUpon>CloneReportWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowForms\CloneCompareWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowForms\CloneCompareWindow.Designer.cs">
+      <DependentUpon>CloneCompareWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowForms\CloneSearchWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowForms\CloneSearchWindow.Designer.cs">
+      <DependentUpon>CloneSearchWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowForms\DeleteSVNSubFoldersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowForms\DeleteSVNSubFoldersForm.Designer.cs">
+      <DependentUpon>DeleteSVNSubFoldersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowForms\DetectCodeSizeWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowForms\DetectCodeSizeWindow.Designer.cs">
+      <DependentUpon>DetectCodeSizeWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowForms\ICloneOptionsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowForms\ICloneOptionsWindow.Designer.cs">
+      <DependentUpon>ICloneOptionsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowForms\ICloneUILocalization.cs" />
+    <Compile Include="WindowForms\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowForms\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUIControls\CCloneSearchOptionsUserControl.resx">
+      <DependentUpon>CCloneSearchOptionsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIControls\CCommonOptionsUserControl.resx">
+      <DependentUpon>CCommonOptionsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIControls\CDetectCodeSizeOptionsUserControl.resx">
+      <DependentUpon>CDetectCodeSizeOptionsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIControls\ICloneBaseUIControl.resx">
+      <DependentUpon>ICloneBaseUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ICloneLocalization.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ICloneLocalization.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ICloneLocalization.resx">
+      <LastGenOutput>ICloneLocalization.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowForms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowForms\CloneCompareWindow.resx">
+      <DependentUpon>CloneCompareWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowForms\CloneReportWindow.resx">
+      <DependentUpon>CloneReportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowForms\CloneSearchWindow.resx">
+      <DependentUpon>CloneSearchWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowForms\DeleteSVNSubFoldersForm.resx">
+      <DependentUpon>DeleteSVNSubFoldersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowForms\DetectCodeSizeWindow.resx">
+      <DependentUpon>DetectCodeSizeWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowForms\ICloneOptionsWindow.resx">
+      <DependentUpon>ICloneOptionsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowForms\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeLoadingLibrary\CodeLoadingLibrary.csproj">
+      <Project>{CF4B0224-AC66-4720-B959-82023EF8A408}</Project>
+      <Name>CodeLoadingLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extensions\iCloneExtensions\ICloneExtensionsManager.csproj">
+      <Project>{FEDAAF72-759E-4F00-AD8C-3D235D76F030}</Project>
+      <Name>ICloneExtensionsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICloneBaseLibrary\ICloneBaseLibrary.csproj">
+      <Project>{81F71051-3697-4951-9D58-29F2EFA958FB}</Project>
+      <Name>ICloneBaseLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICloneCodeCharacteristicsLibrary\ICloneCodeCharacteristicsLibrary.csproj">
+      <Project>{80B174DE-53FB-416F-B5C1-AD60B57CD9B1}</Project>
+      <Name>ICloneCodeCharacteristicsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iCloneSearchLibrary\iCloneSearchLibrary.csproj">
+      <Project>{9466C0A0-E392-45D2-8270-0118BF94506C}</Project>
+      <Name>iCloneSearchLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICloneServices\ICloneServices.csproj">
+      <Project>{BEFB61AC-7007-4205-8773-1A3B0ECBF3F6}</Project>
+      <Name>ICloneServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iDetectCodeSize\iDetectCodeSize.csproj">
+      <Project>{F50C0C7D-1178-4425-BC22-3DE61BBA85A3}</Project>
+      <Name>iDetectCodeSize</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iSourceFilesLibrary\iSourceFilesLibrary.csproj">
+      <Project>{71623E9A-A8B0-4E38-9A71-EED036AE3A9A}</Project>
+      <Name>iSourceFilesLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NDeskOptionsParser\NDeskOptionsParser.csproj">
+      <Project>{A9F805F7-5E1F-443E-AA6B-2FD1CC626E56}</Project>
+      <Name>NDeskOptionsParser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlankBlue.png" />
+    <None Include="Resources\Button Cancel.png" />
+    <None Include="Resources\Binocular.png" />
+    <None Include="Resources\Talk.png" />
+    <None Include="Resources\Help.png" />
+    <None Include="Resources\Construction.png" />
+    <None Include="Resources\Cancel.png" />
+    <Content Include="ICloneIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_AssemblyInfoFilename="Properties\AssemblyInfo.cs" BuildVersion_ConfigurationName="Release" BuildVersion_BuildAction="ReBuild" BuildVersion_BuildVersioningStyle="None.None.Increment.Increment" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

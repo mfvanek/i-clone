@@ -1,0 +1,21 @@
+start 1. ==============
+//*
+int a = 5;          not        commented                 // commented
+//*/
+2. ==============
+/* commented */ not       commented /* again commented */ not           commented /* again commented */
+3. ==============
+/*
+commented   int a = 5; // commented
+//*/
+4. ==============
+not commented /* commented
+commented
+commented
+commented */ not commented
+5. ==============
+not commented /* commented
+commented
+commented
+commented */
+6. ============== end

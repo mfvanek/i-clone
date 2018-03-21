@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\source_files_test">
+      <UniqueIdentifier>{8f508873-7e58-4c78-9465-c2df528697c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\stree_test">
+      <UniqueIdentifier>{58fb6c8b-8c8a-47d7-934a-81d3a2b29643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\filesystem_test">
+      <UniqueIdentifier>{d27b30b0-f8c0-44fa-b37b-df7e80f59c94}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coco_cpp_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="supermax_find_template_tests.cpp">
+      <Filter>Source Files\stree_test</Filter>
+    </ClCompile>
+    <ClCompile Include="supermax_find_code_unit_test.cpp">
+      <Filter>Source Files\stree_test</Filter>
+    </ClCompile>
+    <ClCompile Include="CCodeFragmentTest.cpp">
+      <Filter>Source Files\source_files_test</Filter>
+    </ClCompile>
+    <ClCompile Include="CCodeUnitsCollectionTest.cpp">
+      <Filter>Source Files\source_files_test</Filter>
+    </ClCompile>
+    <ClCompile Include="CCodeUnitTest.cpp">
+      <Filter>Source Files\source_files_test</Filter>
+    </ClCompile>
+    <ClCompile Include="CElementPositionTest.cpp">
+      <Filter>Source Files\source_files_test</Filter>
+    </ClCompile>
+    <ClCompile Include="CSourceFileIDTest.cpp">
+      <Filter>Source Files\source_files_test</Filter>
+    </ClCompile>
+    <ClCompile Include="date_time_test.cpp">
+      <Filter>Source Files\filesystem_test</Filter>
+    </ClCompile>
+    <ClCompile Include="ini_file_test.cpp">
+      <Filter>Source Files\filesystem_test</Filter>
+    </ClCompile>
+    <ClCompile Include="coco_cs_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="get_files_test.cpp">
+      <Filter>Source Files\filesystem_test</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

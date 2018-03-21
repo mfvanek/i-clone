@@ -1,0 +1,23 @@
+
+Есть три типа событий -
+
+1) Начало процедуры
+Название_процедуры-Start() - само событие
+Report-Название_процедуры-Start() - пользовательский обработчик события
+On-Название_процедуры-Start() - уведомление о событии
+
+public event EventHandler LoadFilesStart;
+private void ReportFilesListBuildingStart(object sender, EventArgs e)
+void OnLoadFilesStart()
+
+2) выполнение определенного этапа внутри процедуры
+Report-Название_процедуры-Progress()
+
+public event EventHandler LoadFilesProgress;
+
+3) Окончание процедуры
+Report-Название_процедуры-End()
+
+public event EventHandler LoadFilesEnd;
+private void ReportFilesListBuildingEnd(object sender, EventArgs e)
+void OnFilesListBuildingEnd()

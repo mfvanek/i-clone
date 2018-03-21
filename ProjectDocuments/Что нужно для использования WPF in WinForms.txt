@@ -1,0 +1,6 @@
+Добавляем ссылки на
+
+PresentationCore
+PresentationFramework
+WindowsBase
+WindowsFormsIntegration

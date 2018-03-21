@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ABOUT_VersionLabelText" xml:space="preserve">
+    <value>Версия {0}</value>
+  </data>
+  <data name="ABOUT_WindowHeader" xml:space="preserve">
+    <value>О программе "{0}"</value>
+  </data>
+  <data name="CMNMESS_CannotUseParallelExtensions" xml:space="preserve">
+    <value>Количество вычислительных ядер недостаточно для эффективной работы библиотеки параллельных задач. Рекомендуется отключить эту опцию</value>
+  </data>
+  <data name="CMNMESS_NoOnePluginChoosen" xml:space="preserve">
+    <value>Не выбран ни один языковой плагин</value>
+  </data>
+  <data name="CMNMESS_OperationCancelled" xml:space="preserve">
+    <value>Выполнение операции прервано пользователем</value>
+  </data>
+  <data name="CMNMESS_OperationCancellingInProgress" xml:space="preserve">
+    <value>Подождите, идёт прерывание операции</value>
+  </data>
+  <data name="CMNMESS_OperationDoneSuccesfully" xml:space="preserve">
+    <value>Выполнение операции успешно завершено</value>
+  </data>
+  <data name="CMNMESS_OperationInProgress" xml:space="preserve">
+    <value>Идёт выполнение операции</value>
+  </data>
+  <data name="CMNMESS_OperationtDoneWithErrors" xml:space="preserve">
+    <value>Выполнение операции завершено с ошибками</value>
+  </data>
+  <data name="CMNMESS_PluginsNotAvailable" xml:space="preserve">
+    <value>Не удалось загрузить ни одного плагина. Возможно переустановка приложения позволит решить проблему</value>
+  </data>
+  <data name="CMNMESS_WaitingForUserActions" xml:space="preserve">
+    <value>Ожидание действий пользователя</value>
+  </data>
+  <data name="CMN_FileProcessedNameLabelText" xml:space="preserve">
+    <value>Файлов обработано</value>
+  </data>
+  <data name="CMN_RowsProcessedNameLabelText" xml:space="preserve">
+    <value>Строк обработано</value>
+  </data>
+  <data name="CMN_TimeElapsedNameLabelText" xml:space="preserve">
+    <value>Прошло времени</value>
+  </data>
+  <data name="CMN_TokensProcessedNameLabelText" xml:space="preserve">
+    <value>Токенов обработано</value>
+  </data>
+  <data name="CNMMESS_FunctionalityNotSupported" xml:space="preserve">
+    <value>В текущей версии данная функциональность не поддерживается. Следите за обновлениями.</value>
+  </data>
+  <data name="CNMMESS_InvalidCommandLineArgument" xml:space="preserve">
+    <value>Неверный параметр командной строки. Приложение будет запущено в оконном режиме.</value>
+  </data>
+  <data name="CONSOLE_UseGUIModeMessage" xml:space="preserve">
+    <value>Для получения более широких возможностей используйте оконный режим работы приложения</value>
+  </data>
+  <data name="CONSOLE_WaitingMessage" xml:space="preserve">
+    <value>Нажмите любую клавишу для продолжения...</value>
+  </data>
+  <data name="CSW_ChooseAlgorithmLabelText" xml:space="preserve">
+    <value>Алгоритм для поиска клонов</value>
+  </data>
+  <data name="CSW_ChooseCodeLocationButtonText" xml:space="preserve">
+    <value>Выбор каталога</value>
+  </data>
+  <data name="CSW_CloneSearchTabPage1Text" xml:space="preserve">
+    <value>Параметры поиска</value>
+  </data>
+  <data name="CSW_CloneSearchTabPage2Text" xml:space="preserve">
+    <value>Результаты поиска</value>
+  </data>
+  <data name="CSW_CodeEncodingLabelText" xml:space="preserve">
+    <value>Кодировка исходных файлов</value>
+  </data>
+  <data name="CSW_CodeLanguageLabelText" xml:space="preserve">
+    <value>Язык программирования</value>
+  </data>
+  <data name="CSW_CodeLocationGroupBoxText" xml:space="preserve">
+    <value>Исходный код</value>
+  </data>
+  <data name="CSW_CodeLocationLabelText" xml:space="preserve">
+    <value>Расположение исходных файлов</value>
+  </data>
+  <data name="CSW_CodeProcessingResultsGroupBoxText" xml:space="preserve">
+    <value>Прогресс выполнения</value>
+  </data>
+  <data name="CSW_RowsInModifiedFilesNameLabelText" xml:space="preserve">
+    <value>Строк в измененных файлах</value>
+  </data>
+  <data name="CSW_RowsInOriginalFilesNameLabelText" xml:space="preserve">
+    <value>Строк в оригинальных файлах</value>
+  </data>
+  <data name="CSW_StartCloneSearchButtonText" xml:space="preserve">
+    <value>Начать поиск</value>
+  </data>
+  <data name="CSW_StopCloneSearchButtonText" xml:space="preserve">
+    <value>Прервать</value>
+  </data>
+  <data name="CSW_WindowHeader" xml:space="preserve">
+    <value>Поиск клонов</value>
+  </data>
+  <data name="DCS_ChooseFilesExtensions_Empty" xml:space="preserve">
+    <value>Необходимо указать хотя бы одно расширение файлов</value>
+  </data>
+  <data name="DCS_ChooseFolderError_Empty" xml:space="preserve">
+    <value>Необходимо указать директорию для поиска файлов</value>
+  </data>
+  <data name="DCS_ChooseFolderError_NoneExist" xml:space="preserve">
+    <value>Необходимо указать существующую директорию</value>
+  </data>
+  <data name="DCS_ChooseFolderLabelText" xml:space="preserve">
+    <value>Выбранная директория для поиска файлов с исходным кодом</value>
+  </data>
+  <data name="DCS_ChoosenFileExtLabelText" xml:space="preserve">
+    <value>Расширения файлов, по которым будет осуществлён поиск</value>
+  </data>
+  <data name="DCS_WindowHeader" xml:space="preserve">
+    <value>Оценка объёма программного кода</value>
+  </data>
+  <data name="GUI_CMNOP_ChooseUILangLabelText" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="GUI_CMN_GroupBoxText" xml:space="preserve">
+    <value>Параметры выполнения процедуры</value>
+  </data>
+  <data name="GUI_CMN_IsUseParallelExtensionsCheckBoxText" xml:space="preserve">
+    <value>Использовать библиотеку параллельных задач</value>
+  </data>
+  <data name="GUI_CMN_MemorizeLastRunParamsCheckBoxText" xml:space="preserve">
+    <value>Запоминать параметры последнего запуска процедуры</value>
+  </data>
+  <data name="GUI_CSW_SkippingFoldersLabelNameText" xml:space="preserve">
+    <value>Список каталогов, которые не нужно обрабатывать</value>
+  </data>
+  <data name="ICOP_ICloneCommonOptionsName" xml:space="preserve">
+    <value>Общие</value>
+  </data>
+  <data name="ICOP_ICloneOpCancelButtonText" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="ICOP_ICloneOpOKButtonText" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="ICOP_ICloneOpSaveButtonText" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="ICOP_OptionsTreeHeader" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="ICOP_OptionsTreeHeaderTag" xml:space="preserve">
+    <value>Настройка параметров приложения</value>
+  </data>
+  <data name="ICOP_WindowHeader" xml:space="preserve">
+    <value>Настройки программы</value>
+  </data>
+  <data name="MW_DCSMenuItemName" xml:space="preserve">
+    <value>Оценка объёма кода</value>
+  </data>
+  <data name="MW_DSSFMenuItemName" xml:space="preserve">
+    <value>Удаление SVN-файлов</value>
+  </data>
+  <data name="MW_HelpMenuItemName" xml:space="preserve">
+    <value>Справка</value>
+  </data>
+  <data name="MW_WindowHeader" xml:space="preserve">
+    <value>Главное окно</value>
+  </data>
+</root>

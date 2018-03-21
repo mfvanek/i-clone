@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stree_test", "stree\stree.vcxproj", "{34AE80D2-5C41-476C-96DF-4A611F45504B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CC3A184B-7F42-4A80-82A8-0CC415163503} = {CC3A184B-7F42-4A80-82A8-0CC415163503}
+		{D32B3A76-779A-4F0D-B69E-244CBAB0834F} = {D32B3A76-779A-4F0D-B69E-244CBAB0834F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppUnitLite", "CppUnitLite\CppUnitLite.vcxproj", "{D32B3A76-779A-4F0D-B69E-244CBAB0834F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stree_template", "stree_template.lib\stree_template.lib.vcxproj", "{85D1CA29-0AB1-42AA-953B-A232A69880F9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "source_files", "source_files\source_files.vcxproj", "{CC3A184B-7F42-4A80-82A8-0CC415163503}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "coco_cpp", "coco_cpp.lib\coco_cpp.lib.vcxproj", "{4EC35F7A-0AF8-4B28-832D-4F1946906D36}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "loki", "Loki\src\library.vcxproj", "{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filesystem", "filesystem.lib\filesystem.lib.vcxproj", "{965F6CDF-8EE8-4195-876A-AC837826E1C1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "clone_search", "clone_search.lib\clone_search.lib.vcxproj", "{10021FB1-E90F-45F3-B838-74CB5B0CB10B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "i-clone", "i-clone\i-clone.vcxproj", "{984D5B56-D434-406A-944C-610C64F7B4C6}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "i-CloneSetup", "i-CloneSetup\i-CloneSetup.vdproj", "{48D65D7F-944A-4562-B2C9-066C3867E12C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "coco_cs.lib", "coco_cs.lib\coco_cs.lib.vcxproj", "{DEAF9838-5C35-41AF-80F0-8B0817CC816A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "coco_common.lib", "coco_common.lib\coco_common.lib.vcxproj", "{FEB89D1F-6F95-48C9-B369-EEDA47804CC9}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = stree.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34AE80D2-5C41-476C-96DF-4A611F45504B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{34AE80D2-5C41-476C-96DF-4A611F45504B}.Debug|Win32.Build.0 = Debug|Win32
+		{34AE80D2-5C41-476C-96DF-4A611F45504B}.Release|Win32.ActiveCfg = Release|Win32
+		{34AE80D2-5C41-476C-96DF-4A611F45504B}.Release|Win32.Build.0 = Release|Win32
+		{D32B3A76-779A-4F0D-B69E-244CBAB0834F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D32B3A76-779A-4F0D-B69E-244CBAB0834F}.Debug|Win32.Build.0 = Debug|Win32
+		{D32B3A76-779A-4F0D-B69E-244CBAB0834F}.Release|Win32.ActiveCfg = Release|Win32
+		{D32B3A76-779A-4F0D-B69E-244CBAB0834F}.Release|Win32.Build.0 = Release|Win32
+		{85D1CA29-0AB1-42AA-953B-A232A69880F9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{85D1CA29-0AB1-42AA-953B-A232A69880F9}.Debug|Win32.Build.0 = Debug|Win32
+		{85D1CA29-0AB1-42AA-953B-A232A69880F9}.Release|Win32.ActiveCfg = Release|Win32
+		{85D1CA29-0AB1-42AA-953B-A232A69880F9}.Release|Win32.Build.0 = Release|Win32
+		{CC3A184B-7F42-4A80-82A8-0CC415163503}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC3A184B-7F42-4A80-82A8-0CC415163503}.Debug|Win32.Build.0 = Debug|Win32
+		{CC3A184B-7F42-4A80-82A8-0CC415163503}.Release|Win32.ActiveCfg = Release|Win32
+		{CC3A184B-7F42-4A80-82A8-0CC415163503}.Release|Win32.Build.0 = Release|Win32
+		{4EC35F7A-0AF8-4B28-832D-4F1946906D36}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4EC35F7A-0AF8-4B28-832D-4F1946906D36}.Debug|Win32.Build.0 = Debug|Win32
+		{4EC35F7A-0AF8-4B28-832D-4F1946906D36}.Release|Win32.ActiveCfg = Release|Win32
+		{4EC35F7A-0AF8-4B28-832D-4F1946906D36}.Release|Win32.Build.0 = Release|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Debug|Win32.Build.0 = Debug|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Release|Win32.ActiveCfg = Release|Win32
+		{CBDB8E7A-4286-4AE3-A190-BA33D7C53FF0}.Release|Win32.Build.0 = Release|Win32
+		{965F6CDF-8EE8-4195-876A-AC837826E1C1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{965F6CDF-8EE8-4195-876A-AC837826E1C1}.Debug|Win32.Build.0 = Debug|Win32
+		{965F6CDF-8EE8-4195-876A-AC837826E1C1}.Release|Win32.ActiveCfg = Release|Win32
+		{965F6CDF-8EE8-4195-876A-AC837826E1C1}.Release|Win32.Build.0 = Release|Win32
+		{10021FB1-E90F-45F3-B838-74CB5B0CB10B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{10021FB1-E90F-45F3-B838-74CB5B0CB10B}.Debug|Win32.Build.0 = Debug|Win32
+		{10021FB1-E90F-45F3-B838-74CB5B0CB10B}.Release|Win32.ActiveCfg = Release|Win32
+		{10021FB1-E90F-45F3-B838-74CB5B0CB10B}.Release|Win32.Build.0 = Release|Win32
+		{984D5B56-D434-406A-944C-610C64F7B4C6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{984D5B56-D434-406A-944C-610C64F7B4C6}.Debug|Win32.Build.0 = Debug|Win32
+		{984D5B56-D434-406A-944C-610C64F7B4C6}.Release|Win32.ActiveCfg = Release|Win32
+		{984D5B56-D434-406A-944C-610C64F7B4C6}.Release|Win32.Build.0 = Release|Win32
+		{48D65D7F-944A-4562-B2C9-066C3867E12C}.Debug|Win32.ActiveCfg = Debug
+		{48D65D7F-944A-4562-B2C9-066C3867E12C}.Release|Win32.ActiveCfg = Release
+		{DEAF9838-5C35-41AF-80F0-8B0817CC816A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DEAF9838-5C35-41AF-80F0-8B0817CC816A}.Debug|Win32.Build.0 = Debug|Win32
+		{DEAF9838-5C35-41AF-80F0-8B0817CC816A}.Release|Win32.ActiveCfg = Release|Win32
+		{DEAF9838-5C35-41AF-80F0-8B0817CC816A}.Release|Win32.Build.0 = Release|Win32
+		{FEB89D1F-6F95-48C9-B369-EEDA47804CC9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FEB89D1F-6F95-48C9-B369-EEDA47804CC9}.Debug|Win32.Build.0 = Debug|Win32
+		{FEB89D1F-6F95-48C9-B369-EEDA47804CC9}.Release|Win32.ActiveCfg = Release|Win32
+		{FEB89D1F-6F95-48C9-B369-EEDA47804CC9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
