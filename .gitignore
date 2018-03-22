@@ -1,0 +1,14 @@
+/stree_cpp/Debug
+/stree_cpp/clone_search.lib/Debug
+/stree_cpp/.vs
+/stree_cpp/CppUnitLite/Debug
+/stree_cpp/coco_common.lib/Debug
+/stree_cpp/coco_cpp.lib/Debug
+/stree_cpp/coco_cs.lib/Debug
+/stree_cpp/filesystem.lib/Debug
+/stree_cpp/Loki/src/Debug
+/stree_cpp/i-clone/Debug
+/stree_cpp/source_files/Debug
+/stree_cpp/stree/Debug
+/stree_cpp/stree_template.lib/Debug
+*.user

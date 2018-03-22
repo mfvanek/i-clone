@@ -298,13 +298,13 @@ namespace Coco
    // end .. end, zero-based, exclusive, in byte
    wchar_t* Buffer::GetString(int beg, int end) {
       int len = 0;
-      wchar_t *buf = new wchar_t[end - beg];
+      wchar_t *buf_local = new wchar_t[end - beg];
       int oldPos = GetPos();
       SetPos(beg);
-      while (GetPos() < end) buf[len++] = (wchar_t) Read();
+      while (GetPos() < end) buf_local[len++] = (wchar_t) Read();
       SetPos(oldPos);
-      wchar_t *res = coco_string_create(buf, 0, len);
-      coco_string_delete(buf);
+      wchar_t *res = coco_string_create(buf_local, 0, len);
+      coco_string_delete(buf_local);
       return res;
    }
 
