@@ -322,18 +322,18 @@ namespace Coco
       }
 
       Token* Scanner::CreateToken() {
-         Token *t;
+         Token *t_local;
          if (((char*) heapTop + (int) sizeof(Token)) >= (char*) heapEnd) {
             CreateHeapBlock();
          }
-         t = (Token*) heapTop;
+         t_local = (Token*) heapTop;
          heapTop = (void*) ((char*) heapTop + sizeof(Token));
-         t->val = NULL;
-         t->next = NULL;
-         return t;
+         t_local->val = NULL;
+         t_local->next = NULL;
+         return t_local;
       }
 
-      void Scanner::AppendVal(Token *t) {
+      void Scanner::AppendVal(Token *t_local) {
          int reqMem = (tlen + 1) * sizeof(wchar_t);
          if (((char*) heapTop + reqMem) >= (char*) heapEnd) {
             if (reqMem > COCO_HEAP_BLOCK_SIZE) {
@@ -342,11 +342,11 @@ namespace Coco
             }
             CreateHeapBlock();
          }
-         t->val = (wchar_t*) heapTop;
+         t_local->val = (wchar_t*) heapTop;
          heapTop = (void*) ((char*) heapTop + reqMem);
 
-         wcsncpy(t->val, tval, tlen);
-         t->val[tlen] = L'\0';
+         wcsncpy(t_local->val, tval, tlen);
+         t_local->val[tlen] = L'\0';
       }
 
       Token* Scanner::NextToken()
